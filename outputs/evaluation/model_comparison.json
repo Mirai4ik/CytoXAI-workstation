@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-05-20T00:00:00",
+  "dataset": "SIPaKMeD",
+  "models": [
+    {
+      "architecture": "ResNet18 baseline",
+      "family": "CNN baseline",
+      "status": "evaluated",
+      "accuracy": "96.71%",
+      "precision_macro": "see classification report",
+      "recall_macro": "see classification report",
+      "f1_macro": "see classification report",
+      "samples": 608,
+      "correct": 588,
+      "note": "Baseline checkpoint models/cyto_classifier.pth from the current CytoXAI Workstation state."
+    },
+    {
+      "architecture": "SE-ResNet18 Attention",
+      "family": "CNN + Squeeze-and-Excitation Attention",
+      "status": "implemented / evaluation script ready",
+      "accuracy": "run scripts/evaluate_models.py after local dataset check",
+      "precision_macro": "run scripts/evaluate_models.py",
+      "recall_macro": "run scripts/evaluate_models.py",
+      "f1_macro": "run scripts/evaluate_models.py",
+      "samples": "depends on selected test split",
+      "note": "Final architecture for literal BKR requirement: CNN with attention mechanism. Existing ResNet18 checkpoint can be loaded through identity-compatible SE adapter; optional fine-tuning script is included."
+    }
+  ]
+}
